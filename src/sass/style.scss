@@ -7,6 +7,8 @@
 @import "bootstrap/mixins";
 @import "bootstrap/utilities";
 @import "bootstrap/grid";
+@import "bootstrap/navbar";
+@import "bootstrap/nav";
 
 // variables
 @import "variables";
@@ -16,3 +18,5 @@
 @import "global";
 @import "typography";
 @import "icons";
+
+@import 'partials/header';

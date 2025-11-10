@@ -10,7 +10,105 @@
    <title>Coffee shop</title>
 </head>
 <body>
+   <header class="site-header py-4">
+      <div class="container container-nav">
+        <div class="brand">
+            <h1 class="mb-0">EL TIGRE</h1>
+            <span class="subtitle">VENEZUELA COFFEE BEANS</span>
+        </div>
+         <nav class="navebar navbar-expand-md fixed-top">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mobile-menu" aria-controls="mobile-menu" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mobile-menu">
+               <ul class="navbar-nav">
+                  <li>
+                     <a href="#/" class="nav-item nav-link nav-link_styled active">Home</a>
+                  </li>
+                  <li>
+                     <a href="#/products" class="nav-item nav-link nav-link_styled">Products</a>
+                  </li>
+                  <li>
+                     <a href="#/contact" class="nav-item nav-link nav-link_styled">Contact</a>
+                  </li>
+               </ul>
+            </div>
+         </nav>
+      </div>
+   </header>
+   <section class="container">
+      <div class="card">
+         <img class="w-100" src="./images/background.png" alt="image">
+         <div class="card-body ">
+            <h2 class="hero-title">HOME OF<br>ORIGINAL TASTES</h2>
+            <div class="divider mx-auto my-3"></div>
+               <a href="#/products" class="btn-discover text-uppercase">
+                  Discover <br>
+                  <i class="icon-arrow"></i>
+               </a>
+         </div>
+      </div>
+   </section>
 
+    <!-- PRODUCTS SECTION -->
+    <section class="products py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-5">PRODUCTS</h2>
+
+        <div class="row g-5 products-wrapper">
+          <!-- Produkty generowane przez Handlebars -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT US SECTION -->
+    <section class="about-us text-light py-5">
+      <div class="container">
+        <h2 class="section-title text-center mb-4">ABOUT US</h2>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <p>
+              Who are we? Just a bunch of friends with a love for a good coffee
+              and desire to create something new, something original.
+            </p>
+            <p>
+              Our coffees reflect us – young, wild and free. We are on the
+              journey of new tastes...
+            </p>
+            <p class="fw-bold">Join us!</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer text-center py-4">
+      <div class="container">
+         <p class="mb-0">&copy; 2025 EL TIGRE Inc.</p>
+      </div>
+   </footer>
+
+    <!-- HANDLEBARS TEMPLATE -->
+    <script id="template-product" type="text/x-handlebars-template">
+      <div class="col-md-6">
+        <article class="product-card d-flex flex-column flex-md-row align-items-center">
+          <div class="product-image mb-3 mb-md-0 me-md-4">
+            <img src="{{image}}" alt="{{name}}" class="img-fluid rounded shadow" />
+          </div>
+          <div class="product-info">
+            <h3 class="product-title">{{name}}</h3>
+            <p class="product-description">{{description}}</p>
+            <p><strong>Roasting:</strong> {{roasting}}/10</p>
+            <p><strong>Intensity:</strong> {{intensity}}/10</p>
+            {{#if popular}}
+              <span class="badge bg-warning text-dark">Most Popular</span>
+            {{/if}}
+          </div>
+        </article>
+      </div>
+    </script>
+
+   <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
    <script src="js/script.js" type="module"></script>
 </body>
 </html>

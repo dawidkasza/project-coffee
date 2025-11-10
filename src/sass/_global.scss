@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: $source-code-pro-regular;
+  color: $color-dark;
+  background-color: $color-light;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+a {
+  color: $color-main;
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+
+  &:hover,
+  &:focus {
+    color: darken($color-main, 10%);
+  }
+}
+
+button {
+  font-family: inherit;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
